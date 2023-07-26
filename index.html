@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Presentation-ERDK</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Montserrat:wght@400;500;700&family=Rubik:wght@300&display=swap"
+    rel="stylesheet" />
+  <!-- Normalize -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+    integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./common.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+
+<body>
+  <!-- Авторизація -->
+  <div class="section">
+    <div class="autorization">
+      <h2 class="autorization-title">Авторизація</h2>
+      <div>
+        <img src="./logo-autorization.png" alt="logo" class="logo-autorization" />
+        <h1 class="main-title">єдиний реєстр документів клініки</h1>
+        <p class="main-text">клінiка св.луки</p>
+      </div>
+
+      <div class="autorization-container">
+        <h3 class="autorization-text">Вхід у обліковий запис</h3>
+        <div class="autorization-form">
+          <div class="input-1">
+            <label for="forName"></label>
+            <input id="forName" type="text" name="name" placeholder="Логін" class="form-input" />
+          </div>
+          <div>
+            <label for="forPassword"></label>
+            <input id="forPassword" type="password" name="password" placeholder="Пароль" class="form-input" />
+          </div>
+          <button type="button" class="autorization-btn">Увійти</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="line"></div>
+  <!-- Користувач -->
+  <h2>Користувач</h2>
+  <div class="user">
+    <div class="header-user">
+      <img src="./logo-use1.png" alt="logo" class="logo-user" />
+
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="" class="nav-text accent">Реєстрація звітів</a>
+        </li>
+        <li class="nav-item"><a href="" class="nav-text">Архів</a></li>
+        <li class="nav-item"><a href="" class="nav-text">Повідомлення</a></li>
+      </ul>
+
+      <div>
+        <i class="bx bx-bell bx-sm"></i>
+        <span id="clock" class="clock"></span>
+      </div>
+    </div>
+
+    <div class="container-forms">
+      <ul class="forms-list">
+        <li><a href="" class="forms-text forms-accent">ФОРМА 1</a></li>
+        <li><a href="" class="forms-text">ФОРМА 2</a></li>
+        <li><a href="" class="forms-text">ФОРМА 3</a></li>
+      </ul>
+    </div>
+
+    <div class="form1">
+      <div class="form1-icons">
+        <i class="bx bx-lock-open-alt bx-sm form1-icon"></i>
+        <i class="bx bx-copy bx-sm form1-icon"></i>
+        <i class="bx bx-trash bx-sm form1-delete"></i>
+      </div>
+      <!-- ФОРМА 1 -->
+      <div class="form1-table">
+        <table>
+          <thead>
+            <tr>
+              <th id="date" class="form1-table-size1"></th>
+              <th class="form1-table-title form1-table-size2" colspan="2">
+                ХІРУРГІЯ
+              </th>
+              <th class="form1-table-size3" colspan="3">
+                <select class="list-day">
+                  <option value="1-2day">1-2 доби</option>
+                  <option value="3days">3 доби</option>
+                  <option value="4days">4 доби</option>
+                  <option value="5days">5 діб</option>
+                </select>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="tbody1">
+            <tr>
+              <td colspan="6">
+                <label for="forName"></label>
+                <input id="forName" type="name" name="name" placeholder="П.І.Б. відвідувача" class="form-table-name" />
+              </td>
+            </tr>
+            <tr>
+              <td class="form-table-text">Дії</td>
+              <td colspan="2">
+                <label>
+                  <input type="text" name="action" class="form-table-name" />
+                </label>
+                
+              </td>
+              <td class="form-table-text" colspan="3">Атрибути</td>
+            </tr>
+            <tr class="form-table2">
+              <th>№</th>
+              <th>Назва</th>
+              <th>Кількість</th>
+              <th>Тип</th>
+              <th>Примітки</th>
+              <th>Управління</th>
+            </tr>
+            <tr class="form1-new-row">
+              <th>1</th>
+              <th>
+                <label>
+                  <input type="text" name="action" class="form-table-name" />
+                </label>
+                
+              </th>
+              <th>
+                <label>
+                  <input type="number" name="number" class="form1-table-text-name" /></label>
+              </th>
+              <th>
+                <select class="list-day">
+                  <option value="units">шт.</option>
+                  <option value="ampoules">амп.</option>
+                  <option value="vials">фл.</option>
+                  <option value="milliliters">мл.</option>
+                  <option value="grams">гр.</option>
+                </select>
+              </th>
+              <th>
+                <label>
+                  <input type="text" name="action" class="form-table-name" />
+                </label>
+                
+              </th>
+              <th>
+                <button type="button" class="table1-btn blue copy-button1">
+                  <i class="bx bx-copy bx-sm copy-button1"></i>
+                </button>
+                <button type="button" class="table1-btn red delete-button1">
+                  <i class="bx bx-trash bx-sm delete-button1"></i>
+                </button>
+              </th>
+            </tr>
+          </tbody>
+        </table>
+        <div class="form1-btns">
+          <button type="button" class="form1-btn-save">Зберегти форму</button>
+          <button type="button" id="add-row-form1" class="form1-btn-add">
+            <i class="bx bx-plus bx-sm"></i>
+          </button>
+        </div>
+      </div>
+      <!-- ФОРМА 2 -->
+
+      <div class="form2-table">
+        <div class="form2-icons">
+          <i class="bx bx-lock-open-alt bx-sm form1-icon"></i>
+          <i class="bx bx-copy bx-sm form1-icon"></i>
+          <i class="bx bx-trash bx-sm form1-delete"></i>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th class="form2-table-title form2-table-size1" colspan="6">
+                АНЕСТЕЗІОЛОГІЯ
+              </th>
+            </tr>
+          </thead>
+          <tbody class="tbody2">
+            <tr>
+              <td class="form2-table-size1">
+                <p class="form2-table-column1-text">Дата:</p>
+              </td>
+              <td id="date1" class="form2-table-time"></td>
+              <td class="form2-table-size2">
+                <p class="form2-table-text">№ історії:</p>
+              </td>
+              <td colspan="3" class="form2-table-size3">
+                <label>
+                  <input type="number" name="number" class="form1-table-number" /></label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p class="form2-table-column1-text">Хворий:</p>
+              </td>
+              <td colspan="2">
+                <label>
+                  <input type="text" name="text" placeholder="П.І.Б." class="form1-table-text-name" /></label>
+              </td>
+              <td class="form2-table-size4">
+                <p class="form2-table-year">Вік:</p>
+              </td>
+              <td colspan="2">
+                <label>
+                  <input type="number" name="number" class="form1-table-text-name" /></label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p class="form2-table-column1-text">Діагноз:</p>
+              </td>
+              <td colspan="2">
+                <label>
+                  <input type="text" name="text" class="form1-table-text-name" /></label>
+              </td>
+              <td></td>
+              <td colspan="2"></td>
+            </tr>
+            <tr>
+              <td>
+                <p class="form2-table-column1-text">Операція:</p>
+              </td>
+              <td colspan="2">
+                <label>
+                  <input type="text" name="text" class="form1-table-text-name" /></label>
+              </td>
+              <td></td>
+              <td colspan="2"></td>
+            </tr>
+            <tr class="form2-table2">
+              <td>№</td>
+              <td>Назва</td>
+              <td>Кількість</td>
+              <td>Тип</td>
+              <td>Примітки</td>
+              <td class="form2-table-size5">Управління</td>
+            </tr>
+            <tr class="form2-new-row">
+              <td>1</td>
+              <td>
+                <label>
+                  <input type="text" name="text" class="form1-table-text-name" /></label>
+              </td>
+              <td>
+                <label>
+                  <input type="number" name="number" class="form1-table-text-name" /></label>
+              </td>
+              <td>
+                <select class="list-day">
+                  <option value="units">шт.</option>
+                  <option value="ampoules">амп.</option>
+                  <option value="vials">фл.</option>
+                  <option value="milliliters">мл.</option>
+                  <option value="grams">гр.</option>
+                </select>
+              </td>
+              <td>
+                <label>
+                  <input type="text" name="text" class="form1-table-text-name" /></label>
+              </td>
+              <td>
+                <button type="button" class="table1-btn blue copy-button1">
+                  <i class="bx bx-copy bx-sm copy-button1"></i>
+                </button>
+                <button type="button" class="table1-btn red delete-button1">
+                  <i class="bx bx-trash bx-sm delete-button1"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="form1-btns">
+          <button type="button" class="form1-btn-save">Зберегти форму</button>
+          <button type="button" id="add-row-form2" class="form1-btn-add">
+            <i class="bx bx-plus bx-sm"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- ФОРМА 3 -->
+      <div class="form3-table">
+        <div class="form2-icons">
+          <i class="bx bx-lock-open-alt bx-sm form1-icon"></i>
+          <i class="bx bx-copy bx-sm form1-icon"></i>
+          <i class="bx bx-trash bx-sm form1-delete"></i>
+        </div>
+        <table>
+          <tbody class="tbody3">
+            <tr class="form3-table-text">
+              <td id="date2" class="form3-table-size1"></td>
+              <td rowspan="2" class="form3-table-size2">
+                номер талону квитанції
+              </td>
+              <td colspan="2">
+                <label>
+                  <input type="text" name="text" placeholder="П.І.Б. лікаря" class="form1-table-text-name" /></label>
+              </td>
+            </tr>
+            <tr class="form3-table-text">
+              <td>№</td>
+              <td>відвідувач/хворий</td>
+              <td>примітки</td>
+            </tr>
+            <tr class="form3-new-row">
+              <td>1</td>
+              <td> <label>
+                  <input type="text" name="text" class="form1-table-text-name" /></label></td>
+              <td><label>
+                  <input type="text" name="text" class="form1-table-text-name" /></label></td>
+              </td>
+              <td><label>
+                  <input type="text" name="text" class="form1-table-text-name" /></label></td>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="form1-btns">
+          <button type="button" class="form1-btn-save">Зберегти форму</button>
+          <button type="button" id="add-row-form3" class="form1-btn-add">
+            <i class="bx bx-plus bx-sm"></i>
+          </button>
+        </div>
+      </div>
+      <div class="line forms"></div>
+
+      <ul class="nav-list archive">
+        <li class="nav-item">
+          <a href="" class="nav-text">Реєстрація звітів</a>
+        </li>
+        <li class="nav-item"><a href="" class="nav-text accent">Архів</a></li>
+        <li class="nav-item"><a href="" class="nav-text">Повідомлення</a></li>
+      </ul>
+      <div class="calendar">
+        <input type="text" id="datepicker" class="calendar-input">
+      </div>
+      
+      <div class="line forms"></div>
+      <ul class="nav-list notification">
+        <li class="nav-item">
+          <a href="" class="nav-text">Реєстрація звітів</a>
+        </li>
+        <li class="nav-item"><a href="" class="nav-text">Архів</a></li>
+        <li class="nav-item"><a href="" class="nav-text accent">Повідомлення</a></li>
+      </ul>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js" type="text/javascript"></script>
+  <script src="index.js" type="module"></script>
+</body>
+
+</html>
