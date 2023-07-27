@@ -482,6 +482,38 @@ function addNewTable() {
   console.log('hi');
 }
 
+function updateDate1() {
+  // Получаем текущую дату в формате "DD.MM.YYYY"
+  const currentDate = moment().format("DD.MM.YYYY");
+
+  // Находим все элементы с классом "date"
+  const dateElements = document.querySelectorAll(".date-notification");
+
+  // Устанавливаем текст с текущей датой для каждого элемента
+  dateElements.forEach((element) => {
+    element.textContent = currentDate;
+  });}
+
+  updateDate1();
+
+
+
+  const listItems = document.querySelectorAll(".item-notification");
+const modal = document.querySelector(".modal");
+const modalText = document.getElementById("modalText");
+
+listItems.forEach((item) => {
+  item.addEventListener("mouseover", () => {
+    const text = item.getAttribute("data-text");
+    modalText.textContent = text;
+    modal.style.display = "block";
+    item.classList.remove("accent-notification");
+  });
+
+  item.addEventListener("mouseout", () => {
+    modal.style.display = "none";
+  });
+});
 // class="flatpickr-day"
 
 // tbody1.addEventListener("click", (e) => {
